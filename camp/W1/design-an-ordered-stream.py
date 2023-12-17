@@ -5,7 +5,6 @@ class OrderedStream:
         self.pointer = 1
 
     def insert(self, idKey: int, value: str) -> List[str]:
-        pt = 0
         self.output[idKey] = value
 
         new = []
