@@ -6,11 +6,13 @@ class Solution:
         output = 0
 
         while l <= r:
-            remain = limit - people[r]
-            r-=1
-            output+=1
-            if l <= r and remain >= people[l]:
-               l+=1
+            if people[l] + people[r] <= limit:
+                output+=1
+                l+=1
+                r-=1
+            else:
+                output+=1
+                r-=1
 
         # if l == r and people[l] <= limit:
             # print(people[l])
