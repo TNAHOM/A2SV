@@ -15,6 +15,7 @@ class Solution:
                 add+=nums[r]
                 dic.add(nums[r])
                 r+=1
-            output = max(add, output)
+            if add > output:
+                output = add
             
         return output
